@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;  
+
 
 namespace NET.Bank
 {
     class Program
     {
+        static List<Conta> listContas = new List<Conta>();
         static void Main(string[] args)
         {
             Conta minhaConta = new Conta (TipoConta.PessoaFisica, 1000,500,"Victor");
@@ -19,19 +22,19 @@ namespace NET.Bank
                 switch (opcaoUser)
                 {
                     case "1":
-                        //ListarContas();
+                        ListarContas();
                         break;
                     case "2":
-                        //InserirConta();
+                        InserirConta();
                         break;
                     case "3":
-                       // Transferir();
+                        Transferir();
                         break;
                     case "4":
-                        //Sacar();
+                        Sacar();
                         break;
                     case "5":
-                        //Depositar();
+                        Depositar();
                         break;
                     case "6":
                         System.Console.Clear();
@@ -46,6 +49,91 @@ namespace NET.Bank
 
             System.Console.WriteLine("Obrigado por utilizar o .NET Bank, volte sempre.");
             System.Console.WriteLine();         
+
+        }
+
+        private static void Transferir()
+        {
+            System.Console.WriteLine(("Digite o número da conta de origem:"));
+            int indiceContaOrigem = int.Parse(System.Console.ReadLine());
+
+            System.Console.WriteLine(("Digite o número da conta de origem:"));
+            int indiceContaDestino = int.Parse(System.Console.ReadLine());
+
+            System.Console.WriteLine(("Digite o valor a ser trasnferido:"));
+            double valorTransferencia = double.Parse(System.Console.ReadLine());
+
+            listContas[indiceContaOrigem].Transferir(valorTransferencia, listContas[indiceContaDestino]);
+        }
+
+        private static void Sacar()
+        {
+            System.Console.WriteLine("Digite o número da conta:");
+            int indiceConta = int.Parse(System.Console.ReadLine());
+
+            System.Console.WriteLine("Digite o valor a ser sacado:");
+            double valorSaque = double.Parse(System.Console.ReadLine());
+
+            listContas[indiceConta].Sacar(valorSaque);
+        
+        }
+
+        private static void Depositar()
+        {
+            System.Console.WriteLine("Digite o número da conta favorecida:");
+            int indiceConta = int.Parse(System.Console.ReadLine());
+
+            System.Console.WriteLine("Digite o valor a ser depositado:");
+            double valorDeposito = double.Parse(System.Console.ReadLine());
+
+            listContas[indiceConta].Sacar(valorDeposito);
+        
+        }
+
+
+        private static void InserirConta()
+        {
+            System.Console.WriteLine("Inserir Nova Conta:");
+
+            System.Console.WriteLine("Digite 1 para Pessoa Física ou 2 para Jurídica");
+            int entradaTipoConta = int.Parse(System.Console.ReadLine());
+
+            System.Console.WriteLine("Digite o nome do cliente:");
+            string entradaNome = (System.Console.ReadLine());
+
+            System.Console.WriteLine("Digite o saldo:");
+            double entradaSaldo = double.Parse(System.Console.ReadLine());
+
+            System.Console.WriteLine("Digite o crédito:");
+            double entradaCredito = double.Parse(System.Console.ReadLine());
+
+            Conta novaConta = Conta(tipoConta: (TipoConta)entradaTipoConta,
+                                    saldo: entradaSaldo,
+                                    credito: entradaCredito,
+                                    nome: entradaNome);
+
+            listContas.Add(novaConta);
+
+            
+        }
+
+        private static void ListarContas()
+        {
+            System.Console.WriteLine("Listar Contas");
+
+            if (listContas.Count == 0)
+            {
+                System.Console.WriteLine("Nenhuma conta à listar.");
+                return;
+            }
+
+            for (int i = 0; i < listContas.Count; i++)
+            {
+                Conta conta = listContas[i];
+                System.Console.WriteLine("#{0} . ", i);
+                System.Console.WriteLine(conta);
+
+            }
 
         }
 

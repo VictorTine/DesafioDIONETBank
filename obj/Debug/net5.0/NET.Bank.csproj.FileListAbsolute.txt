@@ -1,0 +1,16 @@
+C:\Users\victo\Repositories\Front\NET.Bank\bin\Debug\net5.0\NET.Bank.exe
+C:\Users\victo\Repositories\Front\NET.Bank\bin\Debug\net5.0\NET.Bank.deps.json
+C:\Users\victo\Repositories\Front\NET.Bank\bin\Debug\net5.0\NET.Bank.runtimeconfig.json
+C:\Users\victo\Repositories\Front\NET.Bank\bin\Debug\net5.0\NET.Bank.runtimeconfig.dev.json
+C:\Users\victo\Repositories\Front\NET.Bank\bin\Debug\net5.0\NET.Bank.dll
+C:\Users\victo\Repositories\Front\NET.Bank\bin\Debug\net5.0\ref\NET.Bank.dll
+C:\Users\victo\Repositories\Front\NET.Bank\bin\Debug\net5.0\NET.Bank.pdb
+C:\Users\victo\Repositories\Front\NET.Bank\obj\Debug\net5.0\NET.Bank.csproj.AssemblyReference.cache
+C:\Users\victo\Repositories\Front\NET.Bank\obj\Debug\net5.0\NET.Bank.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\victo\Repositories\Front\NET.Bank\obj\Debug\net5.0\NET.Bank.AssemblyInfoInputs.cache
+C:\Users\victo\Repositories\Front\NET.Bank\obj\Debug\net5.0\NET.Bank.AssemblyInfo.cs
+C:\Users\victo\Repositories\Front\NET.Bank\obj\Debug\net5.0\NET.Bank.csproj.CoreCompileInputs.cache
+C:\Users\victo\Repositories\Front\NET.Bank\obj\Debug\net5.0\NET.Bank.dll
+C:\Users\victo\Repositories\Front\NET.Bank\obj\Debug\net5.0\ref\NET.Bank.dll
+C:\Users\victo\Repositories\Front\NET.Bank\obj\Debug\net5.0\NET.Bank.pdb
+C:\Users\victo\Repositories\Front\NET.Bank\obj\Debug\net5.0\NET.Bank.genruntimeconfig.cache

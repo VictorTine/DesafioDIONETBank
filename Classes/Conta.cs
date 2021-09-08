@@ -1,19 +1,19 @@
 using System;
 namespace NET.Bank {
     public class Conta{
-        private TipoConta TipoConta { get; set; }
-        private string Nome { get; set; }
-        private double Saldo { get; set; }
-        private double Credito { get; set; }
+        public TipoConta TipoConta { get; set; }
+        public string Nome { get; set; }
+        public double Saldo { get; set; }
+        public double Credito { get; set; }
 
-        public Conta(TipoConta tipoConta, double saldo, double credito, string nome)
-    {
-        this.TipoConta = tipoConta;
-        this.Saldo = saldo;
-        this.Credito = credito;
-        this.Nome = nome;
+    //     public Conta(TipoConta TipoConta, double saldo, double credito, string nome)
+    // {
+    //     this.TipoConta = TipoConta;
+    //     this.Saldo = saldo;
+    //     this.Credito = credito;
+    //     this.Nome = nome;
         
-    }
+    // }
 
         public bool Sacar(double valorSaque){
             if (valorSaque > this.Saldo + this.Credito)
@@ -25,14 +25,14 @@ namespace NET.Bank {
             {
                 this.Saldo -= valorSaque;
 	            //this.Saldo = this.Saldo - valorSaque;
-                System.Console.WriteLine("{0}, seu saldo é de:{}.",this.Nome,this.Saldo);
+                System.Console.WriteLine("{0}, seu saldo é de:{1}.",this.Nome,this.Saldo);
                 return true;
             }
         }
             public void Depositar(double valorDeposito)
             {
             this.Saldo += valorDeposito;
-            System.Console.WriteLine("O saldo atual da conta {0} é de: {1}", this.Nome, this.Saldo);
+            System.Console.WriteLine($"O saldo atual da conta {Nome} é de: {Saldo}");
             }
 
             public void Transferir(double valorTransferencia, Conta contaDestino){

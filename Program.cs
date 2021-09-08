@@ -9,11 +9,11 @@ namespace NET.Bank
         static List<Conta> listContas = new List<Conta>();
         static void Main(string[] args)
         {
-            Conta minhaConta = new Conta (TipoConta.PessoaFisica, 1000,500,"Victor");
-            Conta outraConta = new Conta (TipoConta.PessoaFisica, 0, 300, "Seu Zé");
-            Conta maisUmaConta = new Conta (TipoConta.PessoaJuridica, 5000, 10000, "Empresa S.A");
+            // Conta minhaConta = new Conta (TipoConta.PessoaFisica, 1000,500,"Victor");
+            // Conta outraConta = new Conta (TipoConta.PessoaFisica, 0, 300, "Seu Zé");
+            // Conta maisUmaConta = new Conta (TipoConta.PessoaJuridica, 5000, 10000, "Empresa S.A");
 
-            System.Console.WriteLine(minhaConta.ToString());
+            // System.Console.WriteLine(minhaConta.ToString());
 
             string opcaoUser = ObterOpcaoUser();
 
@@ -107,12 +107,19 @@ namespace NET.Bank
             System.Console.WriteLine("Digite o crédito:");
             double entradaCredito = double.Parse(System.Console.ReadLine());
 
-            Conta novaConta = Conta(tipoConta: (TipoConta)entradaTipoConta,
-                                    saldo: entradaSaldo,
-                                    credito: entradaCredito,
-                                    nome: entradaNome);
+            // Conta novaConta = Conta(tipoConta: (TipoConta)entradaTipoConta,
+            //                         saldo: entradaSaldo,
+            //                         credito: entradaCredito,
+            //                         nome: entradaNome);
+            Conta novaConta = new Conta
+            {
+                TipoConta = (TipoConta)entradaTipoConta,
+                Credito = entradaCredito,
+                Nome = entradaNome,
+                Saldo = entradaSaldo
+            };
 
-            listContas.Add(novaConta);
+             listContas.Add(novaConta);
 
             
         }
